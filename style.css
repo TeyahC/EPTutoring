@@ -644,10 +644,10 @@ contact-card {
   /* NAVIGATION */
   /* NAVIGATION MOBILE */
   nav {
-    position: sticky; /* makes it stick at top */
+    position: sticky;
     top: 0;
     z-index: 999;
-    flex-direction: row; /* hamburger left, logo right */
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 12px 20px;
@@ -671,37 +671,39 @@ contact-card {
   }
 
   .nav-links {
-    position: fixed; /* overlay menu */
+    position: fixed; /* sidebar overlay */
     top: 0;
-    left: 0;
-    width: 100%;
-    max-height: 75vh; /* menu takes max 75% of viewport height */
-    overflow-y: auto; /* scroll inside menu if needed */
+    left: -250px; /* hide offscreen initially */
+    width: 250px; /* width of sidebar */
+    height: 100%; /* full height */
+    max-height: 75vh; /* optional, for smaller screens */
     background: var(--charcoal);
+    display: flex;
     flex-direction: column;
-    display: none;
-    padding-top: 60px; /* space for sticky nav */
-    transition: all 0.3s ease;
+    padding-top: 60px; /* space for nav */
+    gap: 0;
+    transition: left 0.3s ease;
+    overflow-y: auto; /* scroll inside sidebar if needed */
   }
 
   .nav-links.show {
-    display: flex;
+    left: 0; /* slide in from left */
   }
 
   .nav-links li {
     width: 100%;
-    text-align: center;
+    text-align: left;
     border-bottom: 1px solid #444;
   }
 
   .nav-links li a {
     display: block;
-    padding: 15px;
+    padding: 15px 20px;
     color: var(--soft-pink);
     font-size: 18px;
   }
 
   body.menu-open {
-    overflow: hidden; /* prevent page scroll when menu is open */
+    overflow: hidden; /* prevent page scroll when sidebar is open */
   }
 }
