@@ -598,7 +598,7 @@ contact-card {
   }
 
   .about-text-card {
-    width: 100%;
+    width: 90%;
   }
 
   /* CONTACT PAGE */
@@ -610,13 +610,13 @@ contact-card {
 
   .contact-card,
   .info-card {
-    width: 100%;
-    max-width: 100%;
+    width: 90%;
+    max-width: 90%;
   }
 
   .contact-form input,
   .contact-form textarea {
-    width: 100%;
+    width: 90%;
     font-size: 14px;
   }
 
