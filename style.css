@@ -646,7 +646,7 @@ contact-card {
   nav {
     position: sticky;
     top: 0;
-    z-index: 999;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -654,6 +654,7 @@ contact-card {
     background: var(--charcoal);
   }
 
+  /* Hamburger icon */
   .hamburger {
     display: block;
     font-size: 28px;
@@ -663,6 +664,7 @@ contact-card {
     border: none;
   }
 
+  /* Logo */
   .logo {
     margin-left: auto;
     color: var(--rose);
@@ -670,26 +672,29 @@ contact-card {
     font-weight: 700;
   }
 
+  /* Mobile sidebar menu */
   .nav-links {
-    position: fixed; /* sidebar overlay */
+    position: fixed; /* overlay under nav bar */
     top: 0;
-    left: -250px; /* hide offscreen initially */
-    width: 250px; /* width of sidebar */
-    height: 100%; /* full height */
-    max-height: 75vh; /* optional, for smaller screens */
+    left: -250px; /* hidden offscreen initially */
+    width: 250px; /* sidebar width */
+    height: 100%; /* full screen height */
     background: var(--charcoal);
     display: flex;
     flex-direction: column;
-    padding-top: 60px; /* space for nav */
+    padding-top: 60px; /* leave space for sticky nav */
     gap: 0;
     transition: left 0.3s ease;
-    overflow-y: auto; /* scroll inside sidebar if needed */
+    overflow-y: auto;
+    z-index: 999; /* under nav bar */
   }
 
+  /* Slide in */
   .nav-links.show {
-    left: 0; /* slide in from left */
+    left: 0;
   }
 
+  /* Menu items */
   .nav-links li {
     width: 100%;
     text-align: left;
@@ -703,7 +708,8 @@ contact-card {
     font-size: 18px;
   }
 
+  /* Prevent page scroll when menu open */
   body.menu-open {
-    overflow: hidden; /* prevent page scroll when sidebar is open */
+    overflow: hidden;
   }
 }
