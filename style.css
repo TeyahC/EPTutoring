@@ -685,4 +685,48 @@ contact-card {
     color: var(--soft-pink);
     font-size: 18px;
   }
+
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  nav {
+    padding: 12px 20px;
+  }
+
+  nav .logo {
+    margin-left: auto; /* push logo to the right */
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: var(--charcoal);
+    flex-direction: column;
+    gap: 0;
+    display: none; /* hidden by default */
+  }
+
+  .nav-links li {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 15px;
+    color: var(--soft-pink);
+  }
+
+  /* Show menu when active */
+  .nav-links.show {
+    display: flex;
+  }
 }
