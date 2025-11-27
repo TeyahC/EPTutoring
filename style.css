@@ -32,6 +32,10 @@ a {
   text-decoration: none;
 }
 
+nav {
+  position: sticky;
+}
+
 /* Applies to main content sections with white background */
 .page-content,
 .about-wrapper,
