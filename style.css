@@ -670,7 +670,7 @@ contact-card {
     position: absolute;
     top: 60px;
     left: 0;
-    width: 100%;
+    width: 95%;
     background: var(--charcoal);
     display: none;
     flex-direction: column;
