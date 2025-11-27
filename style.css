@@ -676,7 +676,7 @@ contact-card {
   .nav-links {
     position: fixed; /* overlay under nav bar */
     top: 0;
-    left: -250px; /* hidden offscreen initially */
+    left: -500px; /* hidden offscreen initially */
     width: 250px; /* sidebar width */
     height: 100%; /* full screen height */
     background: var(--charcoal);
