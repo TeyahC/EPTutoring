@@ -1,34 +1,21 @@
-<header>
-  <nav>
-    <div class="logo">Eloise Page</div>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Me</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="testimonials.html">Testimonials</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+<nav>
+  <div class="logo">Eloise Page</div>
 
-  <nav class="navbar">
-    <div class="nav-container">
-      <h1 class="logo">Eloise Tutoring</h1>
+  <!-- HAMBURGER ICON -->
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
 
-      <!-- Hamburger Icon -->
-      <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <!-- NAV LINKS -->
+  <ul id="nav-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Me</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="testimonials.html">Testimonials</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
-      <!-- Menu Links -->
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <script>
-    function toggleMenu() {
-      document.querySelector(".nav-links").classList.toggle("active");
-    }
-  </script>
-</header>
+<script>
+  function toggleMenu() {
+    document.getElementById("nav-menu").classList.toggle("open");
+  }
+</script>
