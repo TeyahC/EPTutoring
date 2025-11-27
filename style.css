@@ -679,7 +679,7 @@ contact-card {
   .nav-links {
     position: fixed; /* overlay */
     top: 0;
-    left: -250px; /* hidden initially */
+    left: -350px; /* hidden initially */
     width: 250px; /* sidebar width */
     height: 100%;
     background: var(--charcoal);
