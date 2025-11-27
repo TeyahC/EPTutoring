@@ -638,95 +638,59 @@ contact-card {
   }
 
   /* NAVIGATION */
+  /* NAVIGATION MOBILE */
   nav {
-    flex-direction: column;
-    gap: 10px;
-    padding: 15px 20px;
-    text-align: center;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-  /* Show hamburger on mobile */
-  .hamburger {
-    display: block;
-    color: var(--soft-pink);
-  }
-
-  nav ul {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: var(--charcoal);
-    width: 100%;
-    flex-direction: column;
-    gap: 0;
-    display: none; /* hidden by default */
-    border-top: 2px solid var(--rose);
-    padding: 0;
-  }
-
-  nav ul.open {
-    display: flex; /* show when toggled */
-  }
-
-  nav ul li {
-    width: 100%;
-    text-align: center;
-    border-bottom: 1px solid #444;
-    padding: 12px 0;
-  }
-
-  nav ul li a {
-    display: block;
-    padding: 12px 0;
-    color: var(--soft-pink);
-    font-size: 18px;
-  }
-
-  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: sticky;
     top: 0;
     z-index: 999;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  nav {
     padding: 12px 20px;
   }
 
-  nav .logo {
-    margin-left: auto; /* push logo to the right */
+  /* Hamburger on LEFT */
+  .hamburger {
+    display: block;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: var(--soft-pink);
+    cursor: pointer;
+    margin-right: auto;
   }
 
+  /* Logo CENTERED */
+  nav .logo {
+    margin: 0 auto;
+  }
+
+  /* Menu hidden by default */
   .nav-links {
     position: absolute;
     top: 60px;
     left: 0;
     width: 100%;
     background: var(--charcoal);
+    display: none;
     flex-direction: column;
-    gap: 0;
-    display: none; /* hidden by default */
+    text-align: center;
+    border-top: 2px solid var(--rose);
+  }
+
+  /* Show when toggled */
+  .nav-links.show {
+    display: flex;
   }
 
   .nav-links li {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .nav-links li a {
-    display: block;
-    padding: 15px;
     color: var(--soft-pink);
-  }
-
-  /* Show menu when active */
-  .nav-links.show {
-    display: flex;
+    padding: 15px;
+    display: block;
+    font-size: 18px;
   }
 }
