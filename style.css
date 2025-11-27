@@ -586,7 +586,7 @@ contact-card {
   }
 
   header {
-    margin-bottom: 50px;
+    margin-bottom: 60px;
   }
 
   /* ABOUT SECTION */
@@ -675,6 +675,7 @@ contact-card {
   /* Logo */
   .logo {
     color: var(--rose);
+    margin-right: 50px;
     font-size: 22px;
     font-weight: 700;
   }
