@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutoring Services</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <script>
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+
+          // Now that header is loaded, select hamburger & nav
+          const hamburger = document.getElementById("hamburger");
+          const navLinks = document.getElementById("nav-links");
+
+          if (hamburger && navLinks) {
+            hamburger.addEventListener("click", () => {
+              hamburger.classList.toggle("active");
+              navLinks.classList.toggle("active");
+            });
+          }
+        })
+        .catch((error) => console.error("Error loading header:", error));
+    </script>
+    <div id="header"></div>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+      <h1>Helping Students Build Confidence & Reach Their Full Potential</h1>
+      <p>1:1 tutoring tailored to how your child learns best.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn-primary">Book a Free Consultation</a>
+        <a href="#services" class="btn-secondary">View Services</a>
+      </div>
+    </section>
+
+    <!-- HOME PREVIEW SECTIONS -->
+    <section class="home-previews">
+      <!-- ABOUT PREVIEW -->
+      <div class="preview-card">
+        <h2>About Me</h2>
+        <p>
+          I’m a patient, qualified tutor who focuses on building confidence and
+          understanding through personalised lessons.
+        </p>
+        <a href="about.html" class="preview-btn">Learn More</a>
+      </div>
+
+      <!-- SERVICES PREVIEW -->
+      <div class="preview-card">
+        <h2>What I Offer</h2>
+        <p>
+          Maths, English, GCSE preparation, homework support and tailored 1:1
+          lessons for all learning styles.
+        </p>
+        <a href="services.html" class="preview-btn">View All Services</a>
+      </div>
+
+      <!-- TESTIMONIALS PREVIEW -->
+      <div class="preview-card">
+        <h2>Testimonials</h2>
+        <p>
+          Hear from parents and students who have seen real progress and
+          improved confidence.
+        </p>
+        <a href="testimonials.html" class="preview-btn">Read Reviews</a>
+      </div>
+
+      <!-- CONTACT PREVIEW -->
+      <div class="preview-card">
+        <h2>Get in Touch</h2>
+        <p>
+          Have a question or want to book a free consultation? I’d love to hear
+          from you.
+        </p>
+        <a href="contact.html" class="preview-btn">Contact Me</a>
+      </div>
+    </section>
+  </body>
+</html>

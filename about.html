@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me - Tutoring</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <script>
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+
+          // Now that header is loaded, select hamburger & nav
+          const hamburger = document.getElementById("hamburger");
+          const navLinks = document.getElementById("nav-links");
+
+          if (hamburger && navLinks) {
+            hamburger.addEventListener("click", () => {
+              hamburger.classList.toggle("active");
+              navLinks.classList.toggle("active");
+            });
+          }
+        })
+        .catch((error) => console.error("Error loading header:", error));
+    </script>
+    <div id="header"></div>
+    <header class="hero">
+      <h1>About Me</h1>
+    </header>
+
+    <section class="page-content">
+      <div class="about-wrapper">
+        <!-- TEXT CARD -->
+        <div class="about-text-card">
+          <h2>Hi, I'm [Tutor Name]</h2>
+          <p>
+            I’m a friendly, supportive tutor who helps students grow in
+            confidence, improve their grades, and enjoy learning again. My
+            teaching style is flexible and tailored to each student’s needs.
+          </p>
+
+          <ul class="about-list">
+            <li>1:1 personalised tutoring</li>
+            <li>Specialising in Maths & English</li>
+            <li>GCSE preparation & homework support</li>
+            <li>Calm, patient, confidence-building approach</li>
+          </ul>
+        </div>
+
+        <!-- IMAGE CARD -->
+        <div class="about-image-card">
+          <img src="yourphoto.jpg" alt="Tutor photo" />
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

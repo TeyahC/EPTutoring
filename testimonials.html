@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testimonials - Tutoring</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <script>
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+
+          // Now that header is loaded, select hamburger & nav
+          const hamburger = document.getElementById("hamburger");
+          const navLinks = document.getElementById("nav-links");
+
+          if (hamburger && navLinks) {
+            hamburger.addEventListener("click", () => {
+              hamburger.classList.toggle("active");
+              navLinks.classList.toggle("active");
+            });
+          }
+        })
+        .catch((error) => console.error("Error loading header:", error));
+    </script>
+    <div id="header"></div>
+
+    <header class="hero">
+      <h1>Testimonials</h1>
+    </header>
+
+    <section class="page-content">
+      <p class="intro-text">
+        Real feedback from parents and students who’ve seen amazing progress.
+      </p>
+
+      <div class="testimonial-grid enhanced">
+        <div class="testimonial-card pretty">
+          <p>"My daughter has grown so much in confidence!"</p>
+          <span>- Parent of Year 7 student</span>
+        </div>
+
+        <div class="testimonial-card pretty">
+          <p>"I went from a 3 to a 7 in GCSE maths thanks to these lessons."</p>
+          <span>- GCSE Student</span>
+        </div>
+
+        <div class="testimonial-card pretty">
+          <p>"Amazing tutor, patient and explains everything clearly."</p>
+          <span>- Parent of Year 5 student</span>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

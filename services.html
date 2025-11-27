@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services - Tutoring</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <script>
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+
+          // Now that header is loaded, select hamburger & nav
+          const hamburger = document.getElementById("hamburger");
+          const navLinks = document.getElementById("nav-links");
+
+          if (hamburger && navLinks) {
+            hamburger.addEventListener("click", () => {
+              hamburger.classList.toggle("active");
+              navLinks.classList.toggle("active");
+            });
+          }
+        })
+        .catch((error) => console.error("Error loading header:", error));
+    </script>
+    <div id="header"></div>
+
+    <header class="hero">
+      <h1>Services</h1>
+    </header>
+
+    <section class="page-content">
+      <p class="intro-text">
+        Tailored lessons designed around the way your child learns best.
+      </p>
+
+      <div class="service-grid enhanced">
+        <div class="service-card">
+          <h3>Maths Tutoring</h3>
+          <p>
+            KS1–GCSE maths made simple with clear explanations and examples.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h3>English Tutoring</h3>
+          <p>Reading, writing, spelling, grammar, and exam skills.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>GCSE Preparation</h3>
+          <p>
+            Exam technique, revision planning, practice papers and feedback.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h3>Homework Support</h3>
+          <p>
+            Weekly help to keep students on track and reduce stress at home.
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
