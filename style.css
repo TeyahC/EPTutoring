@@ -640,57 +640,64 @@ contact-card {
   /* NAVIGATION */
   /* NAVIGATION MOBILE */
   nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: sticky;
+    position: sticky; /* makes it stick at top */
     top: 0;
     z-index: 999;
+    flex-direction: row; /* hamburger left, logo right */
+    justify-content: space-between;
+    align-items: center;
     padding: 12px 20px;
+    background: var(--charcoal);
   }
 
-  /* Hamburger on LEFT */
   .hamburger {
     display: block;
     font-size: 28px;
+    cursor: pointer;
+    color: var(--soft-pink);
     background: none;
     border: none;
-    color: var(--soft-pink);
-    cursor: pointer;
-    margin-right: auto;
   }
 
-  /* Logo CENTERED */
-  nav .logo {
-    margin: 0 auto;
+  .logo {
+    margin-left: auto;
+    color: var(--rose);
+    font-size: 22px;
+    font-weight: 700;
   }
 
-  /* Menu hidden by default */
   .nav-links {
-    position: absolute;
-    top: 60px;
+    position: fixed; /* overlay menu */
+    top: 0;
     left: 0;
-    width: 95%;
+    width: 100%;
+    max-height: 75vh; /* menu takes max 75% of viewport height */
+    overflow-y: auto; /* scroll inside menu if needed */
     background: var(--charcoal);
-    display: none;
     flex-direction: column;
-    text-align: center;
-    border-top: 2px solid var(--rose);
+    display: none;
+    padding-top: 60px; /* space for sticky nav */
+    transition: all 0.3s ease;
   }
 
-  /* Show when toggled */
   .nav-links.show {
     display: flex;
   }
 
   .nav-links li {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #444;
   }
 
   .nav-links li a {
-    color: var(--soft-pink);
-    padding: 15px;
     display: block;
+    padding: 15px;
+    color: var(--soft-pink);
     font-size: 18px;
+  }
+
+  body.menu-open {
+    overflow: hidden; /* prevent page scroll when menu is open */
   }
 }
