@@ -579,13 +579,14 @@ contact-card {
 ========================================= */
 
 @media (max-width: 768px) {
-  .body {
-    padding-top: 40px;
-  }
   /* HERO BUTTONS */
   .hero-buttons {
     flex-direction: column;
     gap: 8px;
+  }
+
+  header {
+    margin-bottom: 50px;
   }
 
   /* ABOUT SECTION */
